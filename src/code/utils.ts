@@ -12,7 +12,7 @@ export function inject<T>(service:Newable<T>):T{
     return serviceInstance;
 }
 
-export function generateExpiryTime(minutes) {
+export function generateExpiryTime(minutes:number):number {
     const date = new Date()
     return date.getTime() + minutes * 60000;
 }
